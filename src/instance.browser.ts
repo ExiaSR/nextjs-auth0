@@ -28,6 +28,7 @@ export default function createDummyBrowserInstance(): ISignInWithAuth0 & { isBro
     },
     clientProvider: (): Promise<void> => {
       throw new Error('The handleProfile method can only be used from the server side');
-    }
+    },
+    settings: {}
   };
 }

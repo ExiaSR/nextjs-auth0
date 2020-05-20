@@ -8,6 +8,8 @@ import { ProfileOptions } from './handlers/profile';
 import { IApiRoute } from './handlers/require-authentication';
 import { IOidcClientFactory } from './utils/oidc-client';
 
+import IAuth0Settings from './settings';
+
 export interface IDummyOidcClientFactory {
   (): Promise<void>;
 }
@@ -49,4 +51,6 @@ export interface ISignInWithAuth0 {
   tokenCache: (req: NextApiRequest, res: NextApiResponse) => ITokenCache;
 
   clientProvider: IOidcClientFactory | IDummyOidcClientFactory;
+
+  settings: IAuth0Settings | {};
 }
