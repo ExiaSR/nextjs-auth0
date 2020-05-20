@@ -39,6 +39,7 @@ export default function createInstance(settings: IAuth0Settings): ISignInWithAut
     handleProfile: handlers.ProfileHandler(store, clientProvider),
     getSession: handlers.SessionHandler(store),
     requireAuthentication: handlers.RequireAuthentication(store),
-    tokenCache: handlers.TokenCache(clientProvider, store)
+    tokenCache: handlers.TokenCache(clientProvider, store),
+    clientProvider
   };
 }

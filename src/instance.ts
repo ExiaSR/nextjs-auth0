@@ -6,6 +6,11 @@ import { ITokenCache } from './tokens/token-cache';
 import { CallbackOptions } from './handlers/callback';
 import { ProfileOptions } from './handlers/profile';
 import { IApiRoute } from './handlers/require-authentication';
+import { IOidcClientFactory } from './utils/oidc-client';
+
+export interface IDummyOidcClientFactory {
+  (): Promise<void>;
+}
 
 export interface ISignInWithAuth0 {
   /**
@@ -42,4 +47,6 @@ export interface ISignInWithAuth0 {
    * Token cache which allows you to get an access token for the current user.
    */
   tokenCache: (req: NextApiRequest, res: NextApiResponse) => ITokenCache;
+
+  clientProvider: IOidcClientFactory | IDummyOidcClientFactory;
 }
