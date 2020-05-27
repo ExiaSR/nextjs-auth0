@@ -91,7 +91,8 @@ export default function loginHandler(settings: IAuth0Settings, clientProvider: I
       {
         name: 'a0:state',
         value: state,
-        maxAge: 60 * 60
+        maxAge: 60 * 60,
+        path: '/'
       }
     ]);
 
