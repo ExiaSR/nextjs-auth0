@@ -1,6 +1,6 @@
 {
-  "name": "@auth0/nextjs-auth0",
-  "version": "0.13.0",
+  "name": "@exiasr/nextjs-auth0",
+  "version": "0.13.0-rc.1",
   "description": "Next.js SDK for signing in with Auth0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
